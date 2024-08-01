@@ -24,7 +24,7 @@ jobs:
           flutter format --set-exit-if-changed .
           flutter analyze
           flutter test
-          flutter build apk --split-per-abi
+          flutter build apk --debug
 
       - name: Archive APK
         uses: actions/upload-artifact@v2
