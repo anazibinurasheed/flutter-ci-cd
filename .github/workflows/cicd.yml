@@ -15,7 +15,7 @@ jobs:
 
       - uses: subosito/flutter-action@v1
         with:
-          # flutter-version: '2.5.0'
+          flutter-version: '2.5.0'
           channel: stable
 
       - name: Build apk
@@ -24,7 +24,7 @@ jobs:
           flutter format --set-exit-if-changed .
           flutter analyze
           flutter test
-          flutter build apk --debug
+          flutter build apk --split-per-abi
 
       - name: Archive APK
         uses: actions/upload-artifact@v2
